@@ -99,6 +99,9 @@ public class NominatimSearchRequest extends NominatimRequest {
     @QueryParameter(encode = false)
     private PolygonFormat polygonFormat;
 
+    @QueryParameter("polygon_threshold=%s")
+    private String polygonThreshold;
+
     /**
      * Gets the query parameters.
      * 
@@ -369,5 +372,13 @@ public class NominatimSearchRequest extends NominatimRequest {
      */
     public void setPolygonFormat(PolygonFormat polygonFormat) {
         this.polygonFormat = polygonFormat;
+    }
+
+    public String getPolygonThreshold() {
+        return polygonThreshold;
+    }
+
+    public void setPolygonThreshold(String polygonThreshold) {
+        this.polygonThreshold = polygonThreshold;
     }
 }
